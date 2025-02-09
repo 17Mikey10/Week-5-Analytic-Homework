@@ -1,0 +1,45 @@
+---
+title: "Part 1"
+author: "Michail Tselios"
+date: "2025-02-09"
+output: html_document
+---
+PART 1
+
+
+1. What are some potential sources of bias in the underlying data?
+
+2. How might biases be introduced in the data science pipeline?
+
+3. What are the risks to fairness in downstream applications and deployment of the model described?
+
+The development of predictive models for loan approval decisions, such as those employed by ABC Bank, raises important considerations related to bias and fairness. Biases in data and model development can lead to unfair or discriminatory outcomes, disproportionately affecting certain groups of applicants. This paper discusses potential sources of bias in the underlying data, how biases might be introduced throughout the data science pipeline, and the risks to fairness in downstream applications.
+
+Bias in loan prediction models often originates from historical data used to train these systems. One significant source of bias is historical discrimination in lending practices. Many minority groups have historically faced systemic barriers in obtaining credit, leading to disparities in access to financial services (Bartlett et al., 2019). If the training data reflects these inequities, the model may learn to perpetuate them rather than correct them.
+
+Another potential source of bias is socioeconomic disparities. Creditworthiness is often assessed using factors such as income, employment history, and credit scores. However, these variables are influenced by broader economic and social inequalities. For instance, individuals from disadvantaged backgrounds may have lower credit scores, not necessarily because they are financially irresponsible, but due to structural challenges such as lower access to high-paying jobs or generational wealth (Fuster et al., 2022).
+
+Sampling bias is also a concern. If the dataset used to train the model does not accurately represent the entire population, the model’s predictions may be skewed. For example, if the dataset consists primarily of applicants from urban areas, it may fail to generalize to rural populations with different financial behaviors and needs.
+Even if the original dataset is unbiased, biases can be introduced at various stages of the data science pipeline. One major source is data preprocessing and feature selection. The way data scientists choose to clean and preprocess the data, including handling missing values or selecting features, can introduce bias. If certain demographic groups have more missing data and those records are removed, the model may not learn patterns relevant to those groups.
+
+Another critical stage where bias may emerge is model selection and training. Some machine learning algorithms may amplify biases present in the data. For example, decision trees and logistic regression models may overemphasize certain risk factors, leading to disproportionate denials for certain groups. Additionally, models trained on imbalanced datasets—where certain groups have significantly more or fewer loan applications—may develop biased decision rules (Mehrabi et al., 2021).
+Bias can also be introduced during evaluation and validation. If performance metrics are not carefully chosen, the model may appear to perform well overall while still being unfair to certain subgroups. For instance, an acceptable overall accuracy rate may mask the fact that the model has much higher false-positive or false-negative rates for certain racial or socioeconomic groups.
+
+Deploying a biased loan approval model can lead to unfair outcomes with serious societal consequences. One major risk is discriminatory lending practices, where certain groups—such as racial minorities, women, or low-income individuals—face disproportionately higher denial rates or higher interest rates based on biased predictions rather than true creditworthiness. Such practices can exacerbate economic inequality and violate regulatory guidelines such as the Equal Credit Opportunity Act (ECOA).
+
+Another risk is algorithmic redlining, where models systematically disadvantage individuals based on their geographical location, which often correlates with race or income. If the model learns that applicants from certain zip codes have a higher risk of default, it may unfairly penalize residents from those areas, even if individual applicants have strong financial profiles (Suresh & Guttag, 2021).
+Furthermore, there is a risk of lack of transparency and accountability in decision-making. Many machine learning models, particularly complex ones like neural networks, function as “black boxes,” making it difficult for applicants to understand why they were denied a loan. Without clear explanations, affected individuals may have little recourse to challenge unfair decisions or correct errors.
+
+Finally, regulatory and reputational risks must be considered. If ABC Bank’s model is found to be biased, it could face legal consequences, including lawsuits and fines from regulatory agencies. Additionally, public backlash and loss of consumer trust could harm the bank’s reputation and financial performance.
+
+Bias in loan approval models is a complex and multifaceted issue that requires careful attention throughout the data science pipeline. Historical biases, data imbalances, and algorithmic decision-making processes can all contribute to unfair outcomes. To mitigate these risks, ABC Bank should adopt fairness-aware machine learning techniques, conduct regular audits for bias, and ensure transparency in model decisions. Addressing these concerns is essential not only for regulatory compliance but also for promoting fairness and equity in financial services. 
+
+References
+
+Bartlett, R. P., Morse, A., Stanton, R., & Wallace, N. (2019). Consumer-lending discrimination in the FinTech era (Working Paper No. 25943). National Bureau of Economic Research. https://doi.org/10.3386/w25943
+
+Fuster, A., Goldsmith-Pinkham, P., Ramadorai, T., & Walther, A. (2022). Predictably unequal? The effects of machine learning on credit markets. The Journal of Finance, 77(1), 5-47. https://doi.org/10.1111/jofi.13060
+
+Mehrabi, N., Morstatter, F., Saxena, N., Lerman, K., & Galstyan, A. (2021). A survey on bias and fairness in machine learning. ACM Computing Surveys, 54(6), 1-35. https://doi.org/10.1145/3457607
+
+Suresh, H., & Guttag, J. (2021). A framework for understanding unintended consequences of machine learning. Communications of the ACM, 64(2), 62-71. https://doi.org/10.1145/3433949
