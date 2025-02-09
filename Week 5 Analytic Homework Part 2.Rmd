@@ -1,0 +1,32 @@
+---
+title: "Part 2"
+author: "Michail Tselios"
+date: "2025-02-09"
+output: html_document
+---
+PART 2
+
+
+1. How would you describe a false positive in this problem to a policymaker or business owner? What’s the potential harm/cost of one?
+
+2. How would you describe a false negative to a policymaker or business owner? What’s the potential harm/cost of one?
+
+3. What confusion matrix metric (e.g., FPR, FNR, TPR, FDR, etc.) would you choose to focus on in terms of equity for this case? Think of the fairness tree here.
+
+In predictive loan approval models, errors such as false positives and false negatives have significant business and societal implications. Understanding these errors helps policymakers and business leaders make informed decisions regarding fairness and financial stability.
+
+A false positive occurs when the model incorrectly predicts that an applicant will default on a loan when, in reality, they would have repaid it. This means that a creditworthy individual is wrongly denied a loan. The potential harm includes lost business opportunities for the bank, as rejecting reliable borrowers reduces revenue and customer base (Fuster et al., 2022). On a societal level, such errors may disproportionately affect marginalized communities if historical biases are embedded in the model, further exacerbating financial exclusion (Bartlett et al., 2019).
+
+A false negative happens when the model predicts that an applicant will repay the loan, but they actually default. This can lead to financial losses for the bank due to unpaid loans and increased risk exposure (Mehrabi et al., 2021). If false negatives are widespread, they may contribute to systemic financial instability. However, overcorrecting for false negatives by making the model overly strict could lead to excessive denials, indirectly reinforcing discrimination and limiting access to capital.
+	
+To promote fairness, focusing on the false positive rate (FPR) is crucial. A high FPR means too many applicants who should receive loans are being denied. This is particularly concerning for equity, as historically disadvantaged groups may face higher false positive rates due to biased credit-scoring features (Suresh & Guttag, 2021). Reducing FPR ensures that qualified individuals are not unfairly excluded from financial opportunities.
+ 
+References
+
+Bartlett, R. P., Morse, A., Stanton, R., & Wallace, N. (2019). Consumer-lending discrimination in the FinTech era (Working Paper No. 25943). National Bureau of Economic Research. https://doi.org/10.3386/w25943
+
+Fuster, A., Goldsmith-Pinkham, P., Ramadorai, T., & Walther, A. (2022). Predictably unequal? The effects of machine learning on credit markets. The Journal of Finance, 77(1), 5-47. https://doi.org/10.1111/jofi.13060
+
+Mehrabi, N., Morstatter, F., Saxena, N., Lerman, K., & Galstyan, A. (2021). A survey on bias and fairness in machine learning. ACM Computing Surveys, 54(6), 1-35. https://doi.org/10.1145/3457607
+
+Suresh, H., & Guttag, J. (2021). A framework for understanding unintended consequences of machine learning. Communications of the ACM, 64(2), 62-71. https://doi.org/10.1145/3433949
